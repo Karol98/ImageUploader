@@ -15,7 +15,6 @@ import java.util.Collections;
 
 @Getter
 @Setter
-
 @Entity
 public class AppUser implements UserDetails {
 
@@ -31,7 +30,9 @@ public class AppUser implements UserDetails {
         this.password = password;
         this.role = role;
     }
-    public AppUser() {}
+
+    public AppUser() {
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
